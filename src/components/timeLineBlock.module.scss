@@ -1,0 +1,139 @@
+$border: solid #42567a1a;
+
+
+@font-face {
+    font-family: PT-Sans;
+    src: url(./fonts/PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Bebas-Neue;
+    src: url(./fonts/BebasNeue-Regular.ttf);
+}
+
+.main {
+    position: absolute;
+    width: 1440px;
+    min-height: 1080px;
+    left: calc(100vw/6);
+    border-top: 1px $border;
+    border-bottom: 1px $border;
+    border-left: 2px $border;
+    border-right: 2px $border;
+    display: flex;
+    justify-content: center;
+    font-family: PT-Sans, Arial, Helvetica, sans-serif;
+    transform-origin: 0 0;
+    font-size: 20px;
+
+
+    &:-moz-full-screen {
+        top: 0
+    }
+
+    @media(max-width: 1000px) {
+        font-size: 30px;
+    }
+
+}
+
+.gradient {
+    top: 177px;
+    left: 0;
+    position: absolute;
+    width: 5px;
+    height: 120px;
+    background: linear-gradient(180deg, #3877EE -5%, #EF5DA8 85%);
+
+}
+
+
+
+.h,
+.v {
+    background-color: #42567a1a;
+    position: absolute;
+}
+
+.v {
+    width: 2px;
+    height: 100%;
+}
+
+.h {
+    position: absolute;
+    top: 480px;
+    height: 2px;
+    width: 100%;
+}
+
+.his_head {
+    font-size: 56px;
+    font-weight: bold;
+    color: #42567A;
+    width: 353px;
+    position: absolute;
+    top: 140px;
+    padding-top: 30px;
+    left: 80px;
+    line-height: 67.2px;
+}
+
+.date {
+    font-size: 200px;
+    line-height: 160px;
+    font-weight: bold;
+    position: absolute;
+    top: 390px;
+    left: calc(50% - 500px);
+    word-spacing: 10px;
+
+    :first-child {
+        opacity: 0.9;
+        color: #5D5FEF;
+    }
+
+    :last-child {
+        opacity: 0.9;
+        color: #EF5DA8;
+    }
+}
+
+.btn_next,
+.btn_back {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #42567A80;
+    background-color: white;
+    background-image: url(./images/btn.svg);
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+
+    cursor: pointer;
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.btn_next {
+    transform: scaleX(-1);
+    margin-left: 20px;
+}
+
+.btn_block {
+    font-size: 0.9em;
+    position: absolute;
+    top: 700px;
+    left: 80px;
+}
+
+.slider_box {
+    position: absolute;
+    width: 100%;
+    top: 840px;
+    transition: 0.3s ease-in-out;
+}
